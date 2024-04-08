@@ -1,0 +1,9 @@
+# overlays.yaml
+overlay: 1.0.0
+info:
+  title: Overlay to customise API for Protect Earth
+  version: 0.0.1
+actions:
+  - target: '$.servers[?(@.description=="Development" || @.description=="Staging")]'
+    description: Remove Development and Staging servers but leave anything else.
+    remove: true
